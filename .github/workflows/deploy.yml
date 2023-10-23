@@ -30,5 +30,7 @@ jobs:
     - name: Deploy
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: gh-pages
-        folder: build
+            branch: gh-pages
+            folder: build
+            token: ${{ secrets.GH_PAT }}  # Use the PAT instead of the default token
+        
