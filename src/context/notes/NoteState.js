@@ -1,7 +1,7 @@
 import NoteContext from "./NoteContext";
 import { useState } from "react";
 const NoteState=(props)=>{
-  const host = 'https://notenest.cyclic.app'
+  // const host = 'https://notenest.cyclic.app'
     const initialnotes =[ ]
     const [notes, setnotes] = useState(initialnotes);
     const [userName, setUserName] = useState('');
@@ -15,7 +15,7 @@ const NoteState=(props)=>{
    
     // -----------------------------------------get user name
     const getusername = async () => {
-      const url = `${host}/api/auth/userdetails`;
+      const url = `https://notenest.cyclic.app/api/auth/userdetails`;
   
       try {
         setisLoading(true)
@@ -45,7 +45,7 @@ const NoteState=(props)=>{
 
   //----------------------------------------- get all note
     const allnotes=async()=>{
-      const url=`${host}/api/notes/allnotes`
+      const url=`https://notenest.cyclic.app/api/notes/allnotes`
       try {
         setisLoading(true)
         const response = await fetch(url,{
@@ -70,7 +70,7 @@ const NoteState=(props)=>{
     }
     //---------------------------------------------- Add a note
     const addNote=async(title,description)=>{
-      const url=`${host}/api/notes/addnotes`
+      const url=`https://notenest.cyclic.app/api/notes/addnotes`
       try {
         const response = await fetch(url,{
           method : 'POST',
@@ -93,7 +93,7 @@ const NoteState=(props)=>{
     }
     //----------------------------------------- delete note
     const deleteNote=async(id)=>{
-      const url=`${host}/api/notes/deletenotes/${id}`
+      const url=`https://notenest.cyclic.app/api/notes/deletenotes/${id}`
       try {
         const response= await fetch(url,{
         method : 'DELETE',
@@ -118,7 +118,7 @@ const NoteState=(props)=>{
     // ------------------------edit note
     const editingnote=async(title,description,id)=>{
       // API call
-      const url=`${host}/api/notes/updatenotes/${id}`
+      const url=`https://notenest.cyclic.app/api/notes/updatenotes/${id}`
       try {
         const response = await fetch(url,{
           method : 'PUT',
