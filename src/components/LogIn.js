@@ -4,7 +4,7 @@ import './Login.css'
 import { useHistory } from 'react-router-dom';
 
 function LogIn() {
-  const host = process.env.REACT_APP_API_URL;
+  const host = 'https://notenest.cyclic.app';
   const [credentials, setCredentials] = useState({email:'',password:''});
   const [error, setError] = useState('');
   let history =useHistory()

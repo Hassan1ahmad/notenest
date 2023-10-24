@@ -1,7 +1,7 @@
 import NoteContext from "./NoteContext";
 import { useState } from "react";
 const NoteState=(props)=>{
-  const host = process.env.REACT_APP_API_URL
+  const host = 'https://notenest.cyclic.app'
     const initialnotes =[ ]
     const [notes, setnotes] = useState(initialnotes);
     const [userName, setUserName] = useState('');
@@ -58,8 +58,8 @@ const NoteState=(props)=>{
           throw new Error(`Server responded with ${response.status}`);}
           setisLoading(true)
           const getallnotes =await response.json()
-          setisLoading(false)
           setnotes(getallnotes)
+          setisLoading(false)
 
       } catch (error) {
         console.error("There was an error:", error);
