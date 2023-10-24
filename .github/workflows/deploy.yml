@@ -26,7 +26,7 @@ jobs:
 
     - name: Build with API URL
       run: |
-          echo "REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}" >> $GITHUB_ENV
+          echo "REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}" >> "$GITHUB_ENV"
           npm run build
       
 
