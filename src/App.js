@@ -15,18 +15,22 @@ import Footer from './components/Footer'
 function App() {
   return (
     <>
+    <div className="wrapper">
     <NoteState>
     <Router basename={process.env.PUBLIC_URL}>
       <NavBar/>
+      <div className="main-content">
       <Switch>
         <Route exact path="/" > <Home/> </Route>
         <Route exact path="/notes" > <Notes/> </Route>
         <Route exact path="/login" > <LogIn/> </Route>
         <Route exact path="/signup" > <SignUp/> </Route>
       </Switch>
+      </div>
     </Router>
     <Footer/>
     </NoteState>
+    </div>
 
     </>
   );

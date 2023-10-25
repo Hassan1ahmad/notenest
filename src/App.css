@@ -132,7 +132,16 @@
   display: none;
 }
 
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
+  .main-content { 
+    /* Assuming this class represents your main content */
+    flex: 1; 
+  }
 
 
 
