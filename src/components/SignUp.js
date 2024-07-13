@@ -3,7 +3,7 @@ import { Link,useHistory } from 'react-router-dom'
 import './Login.css'
 
 function SignUp() {
-  // const host = 'https://notenest.cyclic.app'
+  // const host = 'https://notenest-backend.vercel.app'
   const [credentials, setCredentials] = useState({name:'',email:'',password:''});
   const [error, setError] = useState('');
   let history =useHistory()
@@ -11,7 +11,7 @@ function SignUp() {
   // Api call 
   const inputsumbitted = async(e) => {
     e.preventDefault();
-    const url = `https://notenest.cyclic.app/api/auth/createuser`;
+    const url = `https://notenest-backend.vercel.app/api/auth/createuser`;
 
     try {
         const response = await fetch(url, {

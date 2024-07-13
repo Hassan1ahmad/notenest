@@ -4,14 +4,14 @@ import './Login.css'
 import { useHistory } from 'react-router-dom';
 
 function LogIn() {
-  // const host = 'https://notenest.cyclic.app';
+  // const host = 'https://notenest-backend.vercel.app';
   const [credentials, setCredentials] = useState({email:'',password:''});
   const [error, setError] = useState('');
   let history =useHistory()
   // Api call
   const handlesumbitted=async(e)=>{
     e.preventDefault()
-    const url=`https://notenest.cyclic.app/api/auth/login`
+    const url=`https://notenest-backend.vercel.app/api/auth/login`
     try {
       const response = await fetch(url,{
         method : 'POST',
